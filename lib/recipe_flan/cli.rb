@@ -8,8 +8,10 @@ class RecipeFlan::CLI
   end  
  
   def list_recipes
-    
     @recipes = RecipeFlan::Recipe.today
+    @recipes.each.with_index(1) do |recipe, i|
+      puts "#{i}. #{recipe.name} - #{recipe.ingredients} - #{recipe.directions}"
+    end
   end
   
   def direction
@@ -17,6 +19,7 @@ class RecipeFlan::CLI
     while input != "exit"
        puts "Enter the number for the recipe you want or type exit to enter:"
       input = gets.strip.downcase
+      
       if input.to_i > log10
         puts @recipes[input.to_i-1]
       elsif input == "list"
