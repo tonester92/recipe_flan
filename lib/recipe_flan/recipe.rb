@@ -22,9 +22,9 @@ attr_accessor :name, :ingredients, :directions, :url
     doc = Nokogiri::HTML(open("https://www.foodnetwork.com/recipes/tyler-florence/flan-recipe-1914016"))
     
     recipe_1 = self.new  
-    recipe_1.name = doc.search("h1.o-AssetTitle__a-Headline").text
-    recipe_1.ingredients = doc.search("div.o-Ingredients__m-Body").text
-    recipe_1.directions = doc.search("div.o-Method__m-Step").text
+    recipe_1.name = doc.search("h1.o-AssetTitle__a-Headline").text.strip.gsub("\n","")
+    recipe_1.ingredients = doc.search("div.o-Ingredients__m-Body").text.strip.gsub("\n","")
+    recipe_1.directions = doc.search("div.o-Method__m-Step").text.strip.gsub("\n","")
     recipe_1.url = "https://www.foodnetwork.com/recipes/tyler-florence/flan-recipe-1914016"
     binding.pry
     
@@ -35,7 +35,7 @@ attr_accessor :name, :ingredients, :directions, :url
     doc = Nokogiri::HTML(open("https://www.allrecipes.com/recipe/20979/spanish-flan/"))
     
     recipe_2 = self.new  
-    recipe_2.name = doc.search("h1.recipe-summary__h1").text
+    recipe_2.name = doc.search("h1.recipe-summary__h1").text.strip
     recipe_2.ingredients = 
     recipe_2.directions = 
     recipe_2.url =
