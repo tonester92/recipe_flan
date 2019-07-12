@@ -1,5 +1,6 @@
- class RecipeFlan::Recipe
-  
+class RecipeFlan::Recipe
+attr_accessor :name, :ingredients, :directions, :url 
+
   def self.today
     puts <<-DOC.gsub /^\s*/, '' #removes the whitespace
     1. Food Network Flan Created By Tyler Florence 
@@ -18,5 +19,6 @@
     recipe_2.directions = "turn on oven"
     recipe_2.url = "https://www.allrecipes.com/recipe/20979/spanish-flan"
     
+    [recipe_1 , recipe_2]
   end 
 end
