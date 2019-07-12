@@ -21,7 +21,7 @@ class RecipeFlan::CLI
       input = gets.strip.downcase
       
       if input.to_i > 0
-        the_recipe = @recipes[[input.to_i-1]
+        the_recipe = @recipes[input.to_i-1]
         puts "#{i}. #{recipe.name} - #{recipe.ingredients} - #{recipe.directions}"
       elsif input == "list"
         list_recipes
