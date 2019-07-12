@@ -8,10 +8,7 @@ class RecipeFlan::CLI
   end  
  
   def list_recipes
-    puts <<-DOC.gsub /^\s*/, '' #removes the whitespace
-    1. Food Network Flan Created By Tyler Florence 
-    2. All Recipe Flan Created By ASOTO
-    DOC
+    
     @recipes = RecipeFlan::Recipe.today
   end
   
@@ -20,14 +17,11 @@ class RecipeFlan::CLI
     while input != "exit"
        puts "Enter the number for the recipe you want or type exit to enter:"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "More info on recipe 1..."
-      when "2"
-        puts "More info on recipe 2..."
-      when "list"
+      if input.to_i > log10
+        puts @recipes[input.to_i-1]
+      elsif input == "list"
         list_recipes
-      else
+      else 
         puts "Not sure what you want, type or exit."
       end
     end

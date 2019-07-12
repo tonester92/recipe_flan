@@ -2,10 +2,10 @@ class RecipeFlan::Recipe
 attr_accessor :name, :ingredients, :directions, :url 
 
   def self.today
-    puts <<-DOC.gsub /^\s*/, '' #removes the whitespace
-    1. Food Network Flan Created By Tyler Florence 
-    2. All Recipe Flan Created By ASOTO
-    DOC
+    #puts <<-DOC.gsub /^\s*/, '' #removes the whitespace
+    #1. Food Network Flan Created By Tyler Florence 
+    #2. All Recipe Flan Created By ASOTO
+    #DOC
     
     recipe_1 = self.new
     recipe_1.name = "Food Network Flan Created By Tyler Florence"

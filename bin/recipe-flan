@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/recipe_flan'
+require "bundler/setup"
+require "recipe_flan"
 
 RecipeFlan::CLI.new.call
