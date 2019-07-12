@@ -1,4 +1,4 @@
-class RecipeFlan::RecipeFlan
+class RecipeFlan::Recipe
   attr_accessor :name , :ingredients , :directions , :url
   
   def self.all 
