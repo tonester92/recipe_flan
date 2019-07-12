@@ -10,7 +10,7 @@ attr_accessor :name, :ingredients, :directions, :url
   end
   
   def self.scrape_recipes  
-    recipe = []
+    recipes = []
     
     recipes << self.scrape_foodnetwork
     recipes << self.scrape_allrecipes
@@ -31,4 +31,16 @@ attr_accessor :name, :ingredients, :directions, :url
     recipe_1
   end
   
+  def self.scrape_allrecipes
+    doc = Nokogiri::HTML(open("https://www.allrecipes.com/recipe/20979/spanish-flan/"))
+    
+    recipe_2 = self.new  
+    recipe_2.name = 
+    recipe_2.ingredients = 
+    recipe_2.directions = 
+    recipe_2.url =
+    binding.pry
+    
+    recipe_2
+  end
 end
