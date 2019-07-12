@@ -12,6 +12,7 @@ class RecipeFlan::CLI
     1. Food Network Flan Created By Tyler Florence 
     2. All Recipe Flan Created By ASOTO
     DOC
+    @recipes = RecipeFlan::Recipe.today
   end
   
   def direction
