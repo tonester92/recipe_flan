@@ -13,26 +13,22 @@ attr_accessor :name, :ingredients, :directions, :url
     recipe = []
     
     recipes << self.scrape_foodnetwork
-    
-    
-    #recipe_1 = self.new
-    #recipe_1.name = "Food Network Flan Created By Tyler Florence"
-    #recipe_1.ingredients = "milk,sugar"
-    #recipe_1.directions = "turn on oven"
-    #recipe_1.url = "https://www.foodnetwork.com/recipes/tyler-florence/flan-recipe-1914016"
-    
-    #recipe_2 = self.new
-    #recipe_2.name = "All Recipe Flan Created By ASOTO"
-    #recipe_2.ingredients = "milk,sugar"
-    #recipe_2.directions = "turn on oven"
-    #recipe_2.url = "https://www.allrecipes.com/recipe/20979/spanish-flan"
+    recipes << self.scrape_allrecipes
     
     recipes
   end
   
-  def self.scrape_woot 
+  def self.scrape_foodnetwork
     doc = Nokogiri::HTML(open("https://www.foodnetwork.com/recipes/tyler-florence/flan-recipe-1914016"))
     
+    recipe_1 = self.new  
+    recipe_1.name = doc.search("h1.o-AssetTitle__a-Headline").text
+    recipe_1.ingredients = doc.search("div.o-Ingredients__m-Body").text
+    recipe_1.directions = doc.search("div.o-Method__m-Step").text
+    recipe_1.url =
+    binding.pry
+    
+    recipe_1
   end
   
 end
