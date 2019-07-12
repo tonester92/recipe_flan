@@ -17,7 +17,7 @@ class RecipeFlan::CLI
   end
 
   def direction
-   input = nill
+    input = nill
       while input != "exit!"
 	  puts "Enter the number for the recipe you want!"
 	  input = gets.strip.downcase
