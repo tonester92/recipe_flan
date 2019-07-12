@@ -4,6 +4,7 @@ class RecipeFlan::CLI
     puts "Hello There, Here Is Two Flan Dessert Recipes! Which One Is Better for You?"
     list_recipes
     direction
+    goodbye
   end
   
   def list_recipes
@@ -18,7 +19,7 @@ class RecipeFlan::CLI
 
   def direction
     input = nill
-      while input != "exit!"
+    while input != "exit!"
 	  puts "Enter the number for the recipe you want!"
 	  input = gets.strip.downcase
 
@@ -33,6 +34,8 @@ class RecipeFlan::CLI
      end
   end
 
-  
+  def goodbye
+    puts "Which One is Better for You?"
+  end
     
 end 
