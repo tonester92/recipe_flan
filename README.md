@@ -1,6 +1,6 @@
 # RecipeFlan
 
-Weclome Flan Lovers! 
+In this project, I buildt a Ruby gem that provides a Command Line Interface (CLI) to an external data source. My project is based off of my favorite dessert, Flan. I chose two common Flan recipes from the Food Network and the All Recipes. You get to decide based on the data which one you think is best. Thank you for checking out my first gem!   
 
 ## Installation
 
@@ -19,8 +19,14 @@ Or install it yourself as:
     $ gem install recipe_flan
 
 ## Usage
-
-TODO: Write usage instructions here
+Have you ever wanted to know the ingrendients, directions, and reviews for a recipe? 
+Follow the directions then in the program, "Enter the number for the recipe you want or tyoe exit to enter"
+  If you type 1: You will get the Food Network Flan recipe with all of its stats
+  If you type 2: You will get the All Recipes Flan recipe with all of its stats
+  If you have not decided: "Not sure which one is the best? Type Number again. Or picked your favorite already? Type exit"
+  If you decided the one recipe you want, type exit: "Goodbye, Which One Is Better for You?"
+In the end you get to decide. 
+  
 
 ## Development
 

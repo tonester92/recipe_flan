@@ -32,7 +32,7 @@ class RecipeFlan::CLI
       elsif input == "list"
         list_recipes
       else 
-        puts "Not sure which one is the best? Or picked your favorite already? Type exit"
+        puts "Not sure which one is the best? Type Number again. Or picked your favorite already? Type exit"
       end
     end
   end 
