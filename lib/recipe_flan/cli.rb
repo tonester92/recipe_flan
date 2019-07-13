@@ -10,9 +10,9 @@ class RecipeFlan::CLI
   def list_recipes
     @recipes = RecipeFlan::Recipe.today
     @recipes.each.with_index(1) do |recipe, i|
-      puts "#{i}. Name: #{recipe.name} |
-      Ingredients: #{recipe.ingredients} |
-      Directions: #{recipe.directions} |
+      puts "#{i}. Name: #{recipe.name} 
+      Ingredients: #{recipe.ingredients} 
+      Directions: #{recipe.directions} 
       Reviews: #{recipe.reviews}"
     end
   end
@@ -25,9 +25,9 @@ class RecipeFlan::CLI
       
       if input.to_i > 0
         the_recipe = @recipes[input.to_i-1]
-        puts "#{i}. Name: #{recipe.name} |
-        Ingredients: #{recipe.ingredients} |
-        Directions: #{recipe.directions} |
+        puts "#{i}. Name: #{recipe.name} 
+        Ingredients: #{recipe.ingredients} 
+        Directions: #{recipe.directions} 
         Reviews: #{recipe.reviews}"
       elsif input == "list"
         list_recipes
