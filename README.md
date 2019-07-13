@@ -1,6 +1,6 @@
 # RecipeFlan
 
-In this project, I buildt a Ruby gem that provides a Command Line Interface (CLI) to an external data source. My project is based off of my favorite dessert, Flan. I chose two common Flan recipes from the Food Network and the All Recipes. You get to decide based on the data which one you think is best. Thank you for checking out my first gem!   
+In this project, I built a Ruby gem that provides a Command Line Interface (CLI) to an external data source. My project is based off of my favorite dessert, Flan. I chose two common Flan recipes from the Food Network and the All Recipes. You get to decide based on the data which one you think is best. Thank you for checking out my first gem!   
 
 ## Installation
 
