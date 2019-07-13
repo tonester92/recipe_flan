@@ -38,6 +38,6 @@ class RecipeFlan::CLI
   end 
   
   def goodbye
-    puts "Goodbye, Which One Is Better for You?"
+    puts "Goodbye, I hope you enjoy the recipes."
   end
 end 
