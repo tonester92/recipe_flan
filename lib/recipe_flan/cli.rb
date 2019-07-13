@@ -3,7 +3,7 @@ class RecipeFlan::CLI
   def call 
     puts "Hello There, Here Is Two Flan Dessert Recipes! Which One Is Better for You?"
     list_recipes
-    direction
+    directions
     goodbye
   end  
  
@@ -17,7 +17,7 @@ class RecipeFlan::CLI
     end
   end
   
-  def direction
+  def directions
     input = nil 
     while input != "exit"
       puts "Enter the number for the recipe you want or type exit to enter:"
@@ -25,10 +25,10 @@ class RecipeFlan::CLI
       
       if input.to_i > 0
         the_recipe = @recipes[input.to_i-1]
-        puts "#{i}. Name: #{recipe.name} 
-        Ingredients: #{recipe.ingredients} 
-        Directions: #{recipe.directions} 
-        Reviews: #{recipe.reviews}"
+        puts "Name: #{the_recipe.name} 
+        Ingredients: #{the_recipe.ingredients} 
+        Directions: #{the_recipe.directions} 
+        Reviews: #{the_recipe.reviews}"
       elsif input == "list"
         list_recipes
       else 
