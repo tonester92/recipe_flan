@@ -1,6 +1,6 @@
 # RecipeFlan
 
-Weclome!
+Weclome Flan Lovers! 
 
 ## Installation
 
