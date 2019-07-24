@@ -1,5 +1,5 @@
 class RecipeFlan::Recipe
-attr_accessor :name, :ingredients, :directions, :reviews, :url
+attr_accessor :name, :ingredients, :directions, :time, :url
 
   def self.today
     #scrape Food Network and All Recipe and then return deals based on that data
@@ -25,7 +25,7 @@ attr_accessor :name, :ingredients, :directions, :reviews, :url
     recipe.name = doc.search("h1.o-AssetTitle__a-Headline").text.strip
     recipe.ingredients = doc.search("div.o-Ingredients__m-Body").text.strip
     recipe.directions = doc.search("div.o-Method__m-Body").text.strip
-    recipe.reviews = "73 reviews"
+    recipe.time = doc.search("ul.o-RecipeInfo__m-Time").text.strip
     recipe.url = "https://www.foodnetwork.com/recipes/tyler-florence/flan-recipe-1914016"
     
     recipe
@@ -38,7 +38,7 @@ attr_accessor :name, :ingredients, :directions, :reviews, :url
     recipe.name = doc.search("h1.recipe-summary__h1").text.strip
     recipe.ingredients = doc.search("li.checkList__line").text.strip
     recipe.directions = doc.search("span.recipe-directions__list--item").text.strip
-    recipe.reviews = doc.search("span.review-count").text.strip
+    recipe.time = doc.search("span.ready-in-time").text.strip 
     recipe.url = "https://www.allrecipes.com/recipe/20979/spanish-flan/"
     
     recipe

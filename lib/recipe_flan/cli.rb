@@ -10,8 +10,8 @@ class RecipeFlan::CLI
   def list_recipes
     @recipes = RecipeFlan::Recipe.today
     @recipes.each.with_index(1) do |recipe, i|
-      puts "#{i}. Name of Recipe: #{recipe.name} 
-      Number of Reviews: #{recipe.reviews}"
+      puts "#{i}. Name of Recipe: #{recipe.name}
+      Time it takes: #{recipe.time}"
     end
   end
   
@@ -25,8 +25,8 @@ class RecipeFlan::CLI
         the_recipe = @recipes[input.to_i-1]
         puts "Name of Recipe: #{the_recipe.name} 
         Ingredients: #{the_recipe.ingredients} 
-        Directions: #{the_recipe.directions} 
-        Number of Reviews: #{the_recipe.reviews}"
+        Directions: #{the_recipe.directions}
+        Time it takes: #{the_recipe.time}"
       else 
         puts "Not sure which one is the best? Type one or two again. Or picked your favorite already? Type exit."
       end
