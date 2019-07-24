@@ -10,29 +10,27 @@ class RecipeFlan::CLI
   def list_recipes
     @recipes = RecipeFlan::Recipe.today
     @recipes.each.with_index(1) do |recipe, i|
-      puts "#{i}. Name: #{recipe.name} 
-      Ingredients: #{recipe.ingredients} 
-      Directions: #{recipe.directions} 
-      Reviews: #{recipe.reviews}"
+      puts "#{i}. Name of Recipe: #{recipe.name} 
+      Number of Reviews: #{recipe.reviews}"
     end
   end
   
   def directions
     input = nil 
     while input != "exit"
-      puts "Enter the number for the recipe you want or type exit to enter:"
+      puts "Enter the number for the recipe you want either 1 or 2 or type exit:"
       input = gets.strip.downcase
       
       if input.to_i > 0
         the_recipe = @recipes[input.to_i-1]
-        puts "Name: #{the_recipe.name} 
+        puts "Name of Recipe: #{the_recipe.name} 
         Ingredients: #{the_recipe.ingredients} 
         Directions: #{the_recipe.directions} 
-        Reviews: #{the_recipe.reviews}"
-      elsif input == "list"
+        Number of Reviews: #{the_recipe.reviews}"
+      elsif input.to_i == i > 2 
         list_recipes
       else 
-        puts "Not sure which one is the best? Type Number again. Or picked your favorite already? Type exit"
+        puts "Not sure which one is the best? Type one or two again. Or picked your favorite already? Type exit."
       end
     end
   end 
