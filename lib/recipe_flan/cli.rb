@@ -21,14 +21,12 @@ class RecipeFlan::CLI
       puts "Enter the number for the recipe you want either 1 or 2 or type exit:"
       input = gets.strip.downcase
       
-      if input.to_i > 0
+      if input.to_i == 1 || input.to_i == 2 
         the_recipe = @recipes[input.to_i-1]
         puts "Name of Recipe: #{the_recipe.name} 
         Ingredients: #{the_recipe.ingredients} 
         Directions: #{the_recipe.directions} 
         Number of Reviews: #{the_recipe.reviews}"
-      elsif input.to_i == i > 2 
-        list_recipes
       else 
         puts "Not sure which one is the best? Type one or two again. Or picked your favorite already? Type exit."
       end
