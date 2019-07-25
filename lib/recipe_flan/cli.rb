@@ -11,7 +11,7 @@ class RecipeFlan::CLI
     @recipes = RecipeFlan::Recipe.today
     @recipes.each.with_index(1) do |recipe, i|
       puts "#{i}. Name of Recipe: #{recipe.name}
-      Time it takes: #{recipe.time}"
+      i. Time it takes: #{recipe.time}"
     end
   end
   
@@ -19,14 +19,14 @@ class RecipeFlan::CLI
     input = nil 
     while input != "exit"
       puts "Enter the number for the recipe you want either 1 or 2 or type exit:"
-      input = gets.strip.downcase
+      input = gets.strip.downcase 
       
       if input.to_i == 1 || input.to_i == 2 
         the_recipe = @recipes[input.to_i-1]
         puts "Name of Recipe: #{the_recipe.name} 
-        Ingredients: #{the_recipe.ingredients} 
-        Directions: #{the_recipe.directions}
-        Time it takes: #{the_recipe.time}"
+        i. Ingredients: #{the_recipe.ingredients} 
+        ii. Directions: #{the_recipe.directions}
+        iii. Time it takes: #{the_recipe.time}"
       else 
         puts "Not sure which one is the best? Type one or two again. Or picked your favorite already? Type exit."
       end
