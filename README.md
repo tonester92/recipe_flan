@@ -19,11 +19,11 @@ Or install it yourself as:
     $ gem install recipe_flan
 
 ## Usage
-Have you ever wanted to know the ingrendients, directions, and reviews for a recipe? 
-Follow the directions then in the program, "Enter the number for the recipe you want or tyoe exit to enter"
+Have you ever wanted to know the ingrendients, directions, and time it takes for a recipe? 
+Follow the directions then in the program, "Enter the number for the recipe you want either 1 or 2 or type exit:"
   If you type 1: You will get the Food Network Flan recipe with all of its stats.
   If you type 2: You will get the All Recipes Flan recipe with all of its stats.
-  If you have not decided: "Not sure which one is the best? Type Number again. Or picked your favorite already? Type exit"
+  If you have not decided: "Not sure which one is the best? Type one or two again. Or picked your favorite already? Type exit."
   If you decided the one recipe you want, type exit: "Goodbye, Which One Is Better for You?"
 In the end you get to decide. 
 
