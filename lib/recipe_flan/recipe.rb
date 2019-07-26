@@ -2,10 +2,7 @@ class RecipeFlan::Recipe
 attr_accessor :name, :ingredients, :directions, :time, :url
 
   def self.today
-    #scrape Food Network and All Recipe and then return deals based on that data
-    #extract the properties 
-    #instantiate a recipe
-    
+
     self.scrape_recipes
   end
   
