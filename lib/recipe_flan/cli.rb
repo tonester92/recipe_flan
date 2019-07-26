@@ -10,7 +10,7 @@ class RecipeFlan::CLI
   def list_recipes
     @recipes = RecipeFlan::Recipe.today
     @recipes.each.with_index(1) do |recipe, i|
-      puts "#{i}. Name of Recipe: #{recipe.name}
+      puts "#{i}. Name of Recipe: #{recipe.name}"
     end
   end
   
